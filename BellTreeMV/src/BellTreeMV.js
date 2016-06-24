@@ -1,14 +1,18 @@
+// author jun.suzuki2
+
 // 名前空間
 var BellTreeMV = BellTreeMV || {};
 
 
 /**
  * prototypeを継承するための関数
- * @param {Object} childPrototype  
- * @param {Object} parentPrototype 
+ * @param {Object} childPrototype
+ * @param {Object} parentPrototype
  */
 BellTreeMV.inheritPrototype = function (childPrototype, parentPrototype) {
+	'use strict';
 	var parentPrototypeCopy = Object.create(parentPrototype);
+	var property;
 	for (property in parentPrototypeCopy) {
 		if (!childPrototype.hasOwnProperty(property)) {
 			childPrototype[property] = parentPrototypeCopy[property];
@@ -51,17 +55,26 @@ BellTreeMV.Subject = function (state) {
 
 /**
  * オブザーバ(監視者)を追加するメソッド
- * @param {Observer} observer 
+ * @param {Observer} observer
+ * @param {boolean} executeRender
  */
-BellTreeMV.Subject.prototype.addObserver = function (observer) {
+BellTreeMV.Subject.prototype.addObserver = function (observer, executeRender) {
 	'use strict';
+	if (!observer || !observer.render) {
+		throw new Error('BellTreeMV.Subject.prototype.addObserver: illegal argument.');
+	}
 	this.observerArray.push(observer);
+
+	if (executeRender === false) {
+		return;
+	}
+	observer.render(this.state);
 };
 
 
 /**
  * オブザーバ(監視者)を削除するメソッド
- * @param {Observer} observer 
+ * @param {Observer} observer
  */
 BellTreeMV.Subject.prototype.removeObserver = function (observer) {
 	'use strict';
@@ -112,7 +125,7 @@ BellTreeMV.Subject.prototype.setState = function (state, executeNotify) {
 		return;
 	}
 	this.notify();
-}
+};
 
 
 /**
@@ -127,7 +140,7 @@ BellTreeMV.Subject.prototype.setStateValue = function (key, value, executeNotify
 		return;
 	}
 	this.notify();
-}
+};
 
 
 /**
@@ -142,6 +155,6 @@ BellTreeMV.inheritPrototype(BellTreeMV.Model.prototype, BellTreeMV.Subject.proto
 
 
 // requireできるようにする。
-if (typeof module != 'undefined') {
+if (typeof module !== 'undefined') {
 	module.exports = BellTreeMV;
 }
