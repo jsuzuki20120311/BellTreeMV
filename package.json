@@ -1,0 +1,19 @@
+{
+  "name": "bell-tree-mv",
+  "version": "0.9.0",
+  "description": "## 概要 クライアントサイドのMVCのうちMとVの枠組みを提供するライブラリです。 Modelのインスタンスに対し、Modelを監視するViewインスタンスを追加/削除できる機能を持ちます。 jQueryやunderscoreに依存していません。",
+  "main": "./src/BellTreeMV.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsuzuki20120311/BellTreeMV.git"
+  },
+  "author": "jBellTree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsuzuki20120311/BellTreeMV/issues"
+  },
+  "homepage": "https://github.com/jsuzuki20120311/BellTreeMV#readme"
+}
