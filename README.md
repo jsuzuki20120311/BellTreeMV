@@ -9,23 +9,23 @@ jQueryやunderscoreに依存していません。
 
 ## 使い方
 
-### scriptタグを使用するの場合
-
-```html
-<script src="./js/BellTreeMV.js"></script>
-```
-
 ### install
+
 ```sh
 npm install bell-tree-mv --save
 ```
 
-### require する場合
+### require
 
 ```javascript
 var BellTreeMV = require('bell-tree-mv');
 ```
 
+### scriptタグを使用するの場合
+
+```html
+<script src="./js/BellTreeMV.js"></script>
+```
 
 ### Modelの定義方法
 
