@@ -23,7 +23,7 @@ npm install bell-tree-mv --save
 ### require する場合
 
 ```javascript
-var BellTreeMV = require('BellTreeMV');
+var BellTreeMV = require('bell-tree-mv');
 ```
 
 
