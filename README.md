@@ -1,5 +1,7 @@
 # BellTreeMV
 
+[![Code Climate](https://codeclimate.com/github/jsuzuki20120311/bell-tree-mv/badges/gpa.svg)](https://codeclimate.com/github/jsuzuki20120311/bell-tree-mv)
+
 ## 概要
 クライアントサイドのMVCのうちMとVの枠組みを提供するライブラリです。
 Modelのインスタンスに対し、Modelを監視するViewインスタンスを追加/削除できる機能を持ちます。
