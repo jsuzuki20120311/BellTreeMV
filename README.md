@@ -15,10 +15,15 @@ jQueryやunderscoreに依存していません。
 <script src="./js/BellTreeMV.js"></script>
 ```
 
-### requireを使用する場合
+### install
+```sh
+npm install bell-tree-mv --save
+```
+
+### require する場合
 
 ```javascript
-var BellTreeMV = require('./js/BellTreeMV');
+var BellTreeMV = require('BellTreeMV');
 ```
 
 
