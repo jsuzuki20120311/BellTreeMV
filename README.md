@@ -1,5 +1,7 @@
 # BellTreeMV
 
+[![Code Climate](https://codeclimate.com/github/jsuzuki20120311/bell-tree-mv/badges/gpa.svg)](https://codeclimate.com/github/jsuzuki20120311/bell-tree-mv)
+
 ## 概要
 クライアントサイドのMVCのうちMとVの枠組みを提供するライブラリです。
 Modelのインスタンスに対し、Modelを監視するViewインスタンスを追加/削除できる機能を持ちます。
@@ -7,18 +9,23 @@ jQueryやunderscoreに依存していません。
 
 ## 使い方
 
+### install
+
+```sh
+npm install bell-tree-mv --save
+```
+
+### require
+
+```javascript
+var BellTreeMV = require('bell-tree-mv');
+```
+
 ### scriptタグを使用するの場合
 
 ```html
 <script src="./js/BellTreeMV.js"></script>
 ```
-
-### requireを使用する場合
-
-```javascript
-var BellTreeMV = require('./js/BellTreeMV');
-```
-
 
 ### Modelの定義方法
 
