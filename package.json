@@ -1,7 +1,7 @@
 {
   "name": "bell-tree-mv",
-  "version": "0.9.0",
-  "description": "## 概要 クライアントサイドのMVCのうちMとVの枠組みを提供するライブラリです。 Modelのインスタンスに対し、Modelを監視するViewインスタンスを追加/削除できる機能を持ちます。 jQueryやunderscoreに依存していません。",
+  "version": "0.9.1",
+  "description": "Observer pattern library.",
   "main": "./src/BellTreeMV.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
